@@ -6,6 +6,15 @@ body {
   margin-top: 50px;
 }
 
+.input-task {
+  width: calc(100% - 3rem);
+}
+
+.input-task-button {
+  text-align: right;
+  margin-top: 2px;
+}
+
 .task--item {
   padding: 10px 0;
 }
@@ -19,7 +28,8 @@ body {
 }
 
 .task--buttons {
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .task--margin.btn.btn-outline-warning.btn-sm {
@@ -36,4 +46,9 @@ body {
 
 .card-body {
   height: calc(100vh - 200px);
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
 }

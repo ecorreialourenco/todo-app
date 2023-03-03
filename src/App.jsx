@@ -4,7 +4,7 @@ import TaskItem from "./components/TaskItem";
 import TooltipButton from "./components/TooltipButton";
 import { FaPlus } from "react-icons/fa";
 
-function App() {
+const App = () => {
   const savedTasks = localStorage.getItem("tasks")
     ? JSON.parse(localStorage.getItem("tasks"))
     : [];
@@ -59,32 +59,30 @@ function App() {
               })}
             </Card.Body>
             <Card.Footer>
-              <Row>
-                <Col xs="9">
-                  <input
-                    className="form-control"
-                    value={value}
-                    placeholder="Write your task here!"
-                    onChange={(e) => handleChange(e)}
-                  />
-                </Col>
-                <Col xs="3" className="task--buttons">
-                  <TooltipButton
-                    variant="outline-primary"
-                    onClick={() => addTask()}
-                    tooltip="Add"
-                    disabled={!value}
-                  >
-                    <FaPlus />
-                  </TooltipButton>
-                </Col>
-              </Row>
+              <div className="input-task">
+                <input
+                  className="form-control"
+                  value={value}
+                  placeholder="Write your task here!"
+                  onChange={(e) => handleChange(e)}
+                />
+              </div>
+              <div className="input-task-button">
+                <TooltipButton
+                  variant="outline-primary"
+                  onClick={() => addTask()}
+                  tooltip={value ? "Add task" : "Please write your task first"}
+                  disabled={!value}
+                >
+                  <FaPlus />
+                </TooltipButton>
+              </div>
             </Card.Footer>
           </Card>
         </Col>
       </Row>
     </Container>
   );
-}
+};
 
 export default App;

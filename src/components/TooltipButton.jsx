@@ -1,16 +1,27 @@
 import React from "react";
 import { Button, OverlayTrigger, Tooltip } from "react-bootstrap";
 
-function TooltipButton(props) {
-  const { tooltip, onClick, variant, children, ...other } = props;
-
-  return (
-    <OverlayTrigger placement="bottom" overlay={<Tooltip>{tooltip}</Tooltip>}>
-      <Button variant={variant} onClick={onClick} {...other} size="sm">
+const TooltipButton = ({
+  tooltip,
+  onClick,
+  variant,
+  children,
+  disabled,
+  ...other
+}) => (
+  <OverlayTrigger placement="bottom" overlay={<Tooltip>{tooltip}</Tooltip>}>
+    <div>
+      <Button
+        variant={variant}
+        onClick={onClick}
+        disabled={disabled}
+        size="sm"
+        {...other}
+      >
         {children}
       </Button>
-    </OverlayTrigger>
-  );
-}
+    </div>
+  </OverlayTrigger>
+);
 
 export default TooltipButton;
