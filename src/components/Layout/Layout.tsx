@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Header } from "./Header";
-import { Footer } from "./Footer/Footer";
+import { Footer } from "./Footer";
 
 interface LayoutProps {
   onClick: () => void;

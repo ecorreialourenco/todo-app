@@ -1,6 +1,6 @@
 ## Simple Todo App
 
-Simple todo app build in react with bootstrap.
+Simple todo app build in react with TypeScript and TailwindCSS.
 In this app, the tasks created by user are keep in browser storage.
 
 ## Installation
@@ -25,5 +25,5 @@ In this app, the tasks created by user are keep in browser storage.
 ## Technologies Used
 
 - React
-- Bootstrap
-- React-Scripts
+- TypeScript
+- TailwindCSS
