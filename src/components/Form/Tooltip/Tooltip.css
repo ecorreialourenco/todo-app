@@ -1,0 +1,22 @@
+.tooltip {
+  position: relative;
+  opacity: 1 !important;
+  margin: 0 5px;
+}
+
+.tooltip-title {
+  opacity: 0;
+  position: absolute;
+  display: none;
+  background-color: white;
+  top: 10px;
+  z-index: 10;
+  width: max-content;
+  right: 40px;
+  padding: 2px 5px;
+}
+
+.tooltip:hover .tooltip-title {
+  opacity: 1;
+  display: block;
+}
