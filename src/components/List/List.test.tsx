@@ -22,15 +22,4 @@ describe("List", () => {
     const divElements = screen.getAllByTestId("listItem");
     expect(divElements.length).toBe(3);
   });
-
-  /* it("Complete 2nd task", async () => {
-    render(<List list={list} />);
-
-    const divElements = screen.getAllByTestId("listItem");
-    const buttons = await screen.findAllByRole("button")
-
-    fireEvent.click(buttons[1])
-
-  
-  }); */
 });
