@@ -46,8 +46,6 @@ describe("Button", () => {
       />
     );
     const button = screen.getByRole("button");
-
-    fireEvent.click(button);
-    expect(handleClick).toHaveBeenCalledTimes(0);
+    expect(button).toBeDisabled();
   });
 });

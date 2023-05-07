@@ -39,7 +39,6 @@ describe("Modal", () => {
     );
 
     const button = await screen.findByRole("button", { name: "Save" });
-    fireEvent.click(button);
-    expect(handleClick).toHaveBeenCalledTimes(0);
+    expect(button).toBeDisabled();
   });
 });
