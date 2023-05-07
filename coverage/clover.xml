@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1683457498044" clover="3.2.0">
+  <project timestamp="1683457498044" name="All files">
+    <metrics statements="59" coveredstatements="27" conditionals="14" coveredconditionals="10" methods="27" coveredmethods="13" elements="100" coveredelements="50" complexity="0" loc="59" ncloc="59" packages="15" files="18" classes="18"/>
+    <package name="components.Form.Button">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Button.tsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/components/Form/Button/Button.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="16" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Form.IconButton">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="IconButton.tsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/components/Form/IconButton/IconButton.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Form.Input">
+      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="Input.tsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/components/Form/Input/Input.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Form.Tooltip">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Tooltip.tsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/components/Form/Tooltip/Tooltip.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Layout">
+      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="Layout.tsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/components/Layout/Layout.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Layout.Footer">
+      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="Footer.tsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/components/Layout/Footer/Footer.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Layout.Header">
+      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="Header.tsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/components/Layout/Header/Header.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+      <file name="index.jsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/components/Layout/Header/index.jsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="components.List">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="List.tsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/components/List/List.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.List.ListHeader">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="ListHeader.tsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/components/List/ListHeader/ListHeader.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.List.ListItem">
+      <metrics statements="6" coveredstatements="3" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="1"/>
+      <file name="ListItem.tsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/components/List/ListItem/ListItem.tsx">
+        <metrics statements="6" coveredstatements="3" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="1"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Modal">
+      <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+      <file name="Modal.tsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/components/Modal/Modal.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+      </file>
+      <file name="ModalActions.tsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/components/Modal/ModalActions.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+      </file>
+      <file name="ModalTitle.tsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/components/Modal/ModalTitle.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Modal.Backdrop">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Backdrop.tsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/components/Modal/Backdrop/Backdrop.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages">
+      <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="App.tsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/pages/App.tsx">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.Main">
+      <metrics statements="13" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="Main.tsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/pages/Main/Main.tsx">
+        <metrics statements="13" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.Main.AddTaskModal">
+      <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="AddTaskModal.tsx" path="/Users/emanuellourenco/Projectos/GIT Projects/todo-app/src/pages/Main/AddTaskModal/AddTaskModal.tsx">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
