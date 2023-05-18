@@ -10,6 +10,7 @@ const config: Config.InitialOptions = {
   resetMocks: false,
   collectCoverageFrom: [
     "src/**/*.{jsx,tsx}",
+    "!src/index.tsx",
     "!<rootDir>/node_modules/",
     "!<rootDir>/path/to/dir/",
   ],

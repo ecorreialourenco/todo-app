@@ -10,16 +10,17 @@ export const Main = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const { setList } = useStorage();
   const { list } = useContext(StoreContext);
+  console.log("🚀 ~ file: Main.tsx:13 ~ Main ~ list:", list)
   const [task, setTask] = useState<string>("");
 
   const handleSubmit = () => {
-    console.log("🚀 ~ file: Main.tsx:24 ~ handleSubmit ~ handleSubmit:")
     setIsModalOpen(false);
     setList({
       text: task,
       date: new Date().toLocaleDateString(),
       status: Status.Created,
     });
+      console.log("🚀 ~ file: Main.tsx:23 ~ handleSubmit ~ task:", task)
     setTask("");
   };
 

@@ -22,7 +22,7 @@ export const AddTaskModal: FC<AddTaskModalProps> = ({
 
   return (
     <Modal
-      title="Test"
+      title="Task"
       closable
       onClose={onClose}
       onSubmit={onSubmit}
