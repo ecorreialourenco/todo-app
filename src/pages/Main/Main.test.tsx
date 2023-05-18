@@ -1,4 +1,4 @@
-import { fireEvent, prettyDOM, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { Main } from "./Main";
 
 describe("Main", () => {
@@ -16,7 +16,6 @@ describe("Main", () => {
 
     const closeButton = screen.getByText("Close");
     fireEvent.click(closeButton);
-    console.log(prettyDOM());
   });
 
   it("Create task", () => {
