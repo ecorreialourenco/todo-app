@@ -11,7 +11,8 @@ describe("Main", () => {
   it("Open add task form and close", () => {
     render(<Main />);
 
-    const addButton = screen.getByText("New Task");
+    const addButtons = screen.getAllByText("New Task");
+    const addButton = addButtons[1];
     fireEvent.click(addButton);
 
     const closeButton = screen.getByText("Close");
@@ -21,7 +22,10 @@ describe("Main", () => {
   it("Create task", () => {
     render(<Main />);
 
-    const addButton = screen.getByText("New Task");
+    const addButtons = screen.getAllByText("New Task");
+    expect(addButtons.length).toBe(2);
+
+    const addButton = addButtons[1];
     fireEvent.click(addButton);
 
     const input = screen.getByTestId("input");
