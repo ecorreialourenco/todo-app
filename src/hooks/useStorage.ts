@@ -4,12 +4,14 @@ import { Task } from "../models/task.model";
 import { StoreContext } from "../store/store";
 
 export const useStorage = () => {
-  const { setList: setTaskList } = useContext(StoreContext);
-
+  const { setList: setTaskList, list } = useContext(StoreContext);
   useEffect(() => {
     const taskItems = getList();
-    setTaskList(taskItems);
-  }, [setTaskList]);
+
+    if (JSON.stringify(list) !== JSON.stringify(taskItems)) {
+      setTaskList(taskItems);
+    }
+  }, [setTaskList, list]);
 
   const getList = () => {
     const stored = localStorage.getItem("tasks");

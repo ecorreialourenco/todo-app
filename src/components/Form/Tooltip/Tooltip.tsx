@@ -9,6 +9,7 @@ interface TooltipProps {
 export const Tooltip: FC<TooltipProps> = ({ title, children }) => (
   <div className="tooltip">
     <div className="tooltip-title">{title}</div>
+    <div className="tooltip-arrow" />
     {children}
   </div>
 );

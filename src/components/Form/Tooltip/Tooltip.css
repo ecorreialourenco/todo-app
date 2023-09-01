@@ -8,15 +8,29 @@
   opacity: 0;
   position: absolute;
   display: none;
-  background-color: white;
-  top: 10px;
+  background-color: #98a4ae;
+  top: 0px;
   z-index: 10;
   width: max-content;
   right: 40px;
   padding: 2px 5px;
 }
 
-.tooltip:hover .tooltip-title {
+.tooltip-arrow {
+  opacity: 0;
+  position: absolute;
+  display: none;
+  top: 0;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 14px solid #98a4ae;
+}
+
+.tooltip:hover .tooltip-title,
+.tooltip:hover .tooltip-arrow {
   opacity: 1;
   display: block;
 }
