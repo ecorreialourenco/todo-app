@@ -22,6 +22,10 @@ In this app, the tasks created by user are keep in browser storage.
 - Restore/Initialize a task by clicking the "Recycle icon" button next to it
 - Filter tasks by All, Active, or Completed using the buttons at the bottom of the app
 
+## Demo
+
+- You can test this app here [Demo]([/guides/content/editing-an-existing-page](https://ecorreialourenco.github.io/todo-app/ )
+
 ## Technologies Used
 
 - React
