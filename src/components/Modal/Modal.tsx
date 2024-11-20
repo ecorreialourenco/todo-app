@@ -5,7 +5,6 @@ import { ModalActions } from "./ModalActions";
 
 interface ModalProps {
   title: string;
-  closable?: boolean;
   closeTitle?: string;
   submitTitle?: string;
   onClose: () => void;
