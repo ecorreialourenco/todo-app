@@ -1,59 +1,71 @@
 import { FC } from "react";
-import { Task } from "../../../models/task.model";
 import { BsTrash, BsCheck, BsRecycle } from "react-icons/bs";
+
+import { Task } from "../../../models/task.model";
 import { IconButton, Tooltip } from "../../Form";
-import { Status } from "../../../enum/status.enum";
-import { useStorage } from "../../../hooks/useStorage";
 
 interface ListItemProps {
   pos: number;
   item: Task;
+  onStatusChange?: (taskId: string, status: Boolean) => void;
+  onDelete?: (taskId: string) => void;
 }
 
 export const ListItem: FC<ListItemProps> = ({
   pos,
-  item: { text, date, status },
+  item: { id, task, status },
+  onStatusChange,
+  onDelete,
 }) => {
-  const { changeTaskStatus, deleteTask } = useStorage();
+  const handleStatusChange = (newStatus: Boolean) => {
+    if (id && onStatusChange) {
+      onStatusChange(id, newStatus);
+    }
+  };
+
+  const handleDelete = () => {
+    if (id && onDelete) {
+      onDelete(id);
+    }
+  };
 
   return (
     <div
       data-testid="listItem"
       className="flex p-2 odd:bg-white even:bg-slate-50 "
     >
-      <div className="block w-[64px]">#{pos + 1}</div>
-      <div className="block w-[100px]">{date}</div>
+      <div className="block w-16">#{pos + 1}</div>
       <div
         className={`block w-[calc(100%-274px)] ${
-          status === Status.Completed && "line-through"
+          status && "line-through"
         }`}
       >
-        {text}
+        {task}
       </div>
-      <div className="block w-[110px] justify-content-end flex">
-        {status === Status.Completed ? (
+      <div className="w-27.5 justify-content-end flex">
+        {status ? (
           <>
             <Tooltip title="Delete">
               <IconButton
-                icon={<BsTrash />}
+                icon={BsTrash}
                 className="bg-red-500 text-white"
-                onClick={() => deleteTask(pos)}
+                onClick={handleDelete}
               />
             </Tooltip>
             <Tooltip title="Recover">
               <IconButton
-                icon={<BsRecycle />}
+                icon={BsRecycle}
                 className="bg-blue-200"
-                onClick={() => changeTaskStatus(pos, Status.Created)}
+                onClick={() => handleStatusChange(false)}
               />
             </Tooltip>
           </>
         ) : (
           <Tooltip title="Complete">
             <IconButton
-              icon={<BsCheck />}
+              icon={BsCheck}
               className="bg-cyan-500 text-white"
-              onClick={() => changeTaskStatus(pos, Status.Completed)}
+              onClick={() => handleStatusChange(true)}
             />
           </Tooltip>
         )}

@@ -1,31 +1,40 @@
 import React, { useContext, useState } from "react";
-import { AddTaskModal } from "./AddTaskModal";
-import { List } from "../../components/List";
-import { Button, Layout } from "../../components";
-import { useStorage } from "../../hooks/useStorage";
-import { Status } from "../../enum/status.enum";
-import { StoreContext } from "../../store/store";
 
-export const Main = () => {
+import { List } from "../../components/List";
+import { Status } from "../../enum/status.enum";
+import { User } from "../../models/user.model";
+import { StoreContext } from "../../store/store";
+import { Button, Layout } from "../../components";
+import { AddTaskModal } from "./AddTaskModal";
+
+interface MainProps {
+  user: User;
+  updateTaskStatus: (taskId: string, status: Boolean) => Promise<void>;
+  deleteTask: (taskId: string) => Promise<void>;
+}
+
+export const Main = ({ user, updateTaskStatus, deleteTask }: MainProps) => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  const { setList } = useStorage();
-  const { list } = useContext(StoreContext);
+  const { list, setList } = useContext(StoreContext);
   const [task, setTask] = useState<string>("");
 
   const handleSubmit = () => {
     setIsModalOpen(false);
     setList({
-      text: task,
-      date: new Date().toLocaleDateString(),
-      status: Status.Created,
+      task,
+      status: false,
     });
     setTask("");
   };
 
   return (
-    <Layout onClick={() => setIsModalOpen(true)}>
+    <Layout onClick={() => setIsModalOpen(true)} user={user}>
       {list.length ? (
-        <List list={list} />
+        <List 
+          list={list} 
+          onStatusChange={updateTaskStatus}
+          onDelete={deleteTask}
+        />
       ) : (
         <div className="grid w-full h-full">
           <div className="place-self-center	text-center	">

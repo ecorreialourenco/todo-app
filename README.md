@@ -1,33 +1,189 @@
-## Simple Todo App
+# Todo App
 
-Simple todo app build in react with TypeScript and TailwindCSS.
-In this app, the tasks created by user are keep in browser storage.
+A modern, full-featured task management application built with **React**, **TypeScript**, and **TailwindCSS**. Features user authentication, cloud-based data persistence with **Supabase**, and a complete testing suite.
 
-## Installation
+## ✨ Features
 
-1. Clone the repository
-2. Run `npm install` to install the dependencies
-3. Run `npm start` to start the development server
+- 🔐 **User Authentication** - Secure signup, login, and logout with Supabase
+- ✅ **Task Management** - Create, complete, delete, and restore tasks
+- 🏷️ **Filter Tasks** - View all, active, or completed tasks
+- ⚙️ **User Settings** - Update username and password
+- 🌐 **Cloud Storage** - All tasks synced with Supabase database
+- 📱 **Responsive Design** - Works seamlessly on all devices
+- 🧪 **Comprehensive Tests** - Full test coverage with Jest and React Testing Library
 
-## Testing
+## 🚀 Quick Start
 
-- Run `npm test` to test the application
-- Run `npm test:coverage` to check the test coverage
+### Prerequisites
 
-## Usage
+- Node.js 16+ and npm
+- Supabase account and project credentials
 
-- Add a task by typing it into the input field and pressing "Write your task here!" or clicking the "Add Task" button
-- Mark a task as completed by clicking the checkbox next to it
-- Delete a task by clicking the "Trash icon" button next to it
-- Restore/Initialize a task by clicking the "Recycle icon" button next to it
-- Filter tasks by All, Active, or Completed using the buttons at the bottom of the app
+### Installation
 
-## Demo
+1. **Clone the repository**
 
-- You can test this app here [Demo]([/guides/content/editing-an-existing-page](https://ecorreialourenco.github.io/todo-app/ )
+   ```bash
+   git clone https://github.com/ecorreialourenco/todo-app.git
+   cd todo-app
+   ```
 
-## Technologies Used
+2. **Install dependencies**
 
-- React
-- TypeScript
-- TailwindCSS
+   ```bash
+   npm install
+   ```
+
+3. **Configure environment variables**
+   Create a `.env.local` file in the root directory:
+
+   ```env
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+   The app will be available at `http://localhost:5173`
+
+## 📖 Usage
+
+### Authentication
+
+1. **Sign Up**: Create a new account with email, password, and username
+2. **Log In**: Access your existing account
+3. **Log Out**: Found in the header navigation
+
+### Task Management
+
+- **Create Task**: Click "New Task" button, enter task description, confirm
+- **Complete Task**: Click the checkbox next to a task to mark it complete/incomplete
+- **Delete Task**: Click the trash icon to remove a task
+- **Restore Task**: Click the recycle icon to restore a deleted task (if applicable)
+- **Filter Tasks**: Use filter buttons to view All, Active, or Completed tasks
+
+### User Settings
+
+- Navigate to Settings (gear icon in header)
+- **Change Username**: Update your profile username
+- **Change Password**: Update your account password
+
+## 🛠️ Development
+
+### Available Scripts
+
+```bash
+# Development server
+npm run dev
+
+# Production build
+npm run build
+
+# Preview production build
+npm preview
+
+# Run tests
+npm test
+
+# Run tests with coverage report
+npm test:coverage
+```
+
+## 🧪 Testing
+
+The project includes comprehensive unit tests for all components and hooks:
+
+- **Run all tests**: `npm test`
+- **Run with coverage**: `npm test:coverage`
+- **Test files**: Located alongside source files with `.test.tsx` extension
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── Form/           # Form related components (Button, Input, etc.)
+│   ├── Layout/         # Main layout wrapper with Header/Footer
+│   ├── List/           # Task list components
+│   └── Modal/          # Modal dialog components
+├── pages/              # Page components
+│   ├── App.tsx         # Root app component with routing
+│   ├── Auth/           # Login/Signup pages
+│   ├── Main/           # Task dashboard page
+│   └── Settings/       # User settings page
+├── hooks/              # Custom React hooks
+│   ├── useAuth.tsx     # Authentication logic
+│   └── useSupabaseTasks.tsx  # Task management logic
+├── models/             # TypeScript data models
+├── lib/                # Utility libraries (Supabase client)
+├── store/              # Global state management
+├── css/                # Global styles
+└── enum/               # TypeScript enumerations
+```
+
+## 🔧 Tech Stack
+
+### Frontend
+
+- **React** 18.2 - UI framework
+- **TypeScript** 5.0 - Type safety
+- **React Router** 7.13 - Client-side routing
+- **TailwindCSS** 3 - Utility-first CSS
+
+### Backend & Services
+
+- **Supabase** 2.100 - Authentication & database
+- **PostgreSQL** - Data persistence
+
+### Development & Testing
+
+- **Vite** - Fast build tool
+- **Jest** - Testing framework
+- **React Testing Library** - Component testing
+- **PostCSS** - CSS processing
+- **ESLint** - Code quality
+
+### Deployment
+
+- **GitHub Pages** - Static hosting
+
+## 🌐 Demo
+
+Try the live app: [https://ecorreialourenco.github.io/todo-app/](https://ecorreialourenco.github.io/todo-app/)
+
+## 📝 API Models
+
+### User Model
+
+```typescript
+{
+  id: string;
+  email: string;
+  username: string;
+  created_at: string;
+}
+```
+
+### Task Model
+
+```typescript
+{
+  id: string;
+  user_id: string;
+  title: string;
+  description: string;
+  status: "pending" | "completed";
+  created_at: string;
+  updated_at: string;
+}
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork this repository and submit pull requests.
+
+## 📄 License
+
+This project is open source and available under the MIT License.

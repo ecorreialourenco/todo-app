@@ -1,13 +1,12 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { ListItem } from "./ListItem";
 import { Task } from "../../../models/task.model";
-import { Status } from "../../../enum/status.enum";
 
 describe("ListItem", () => {
   const task: Task = {
-    text: "task 1",
+    task: "task 1",
     date: "2023-05-15",
-    status: Status.Created,
+    status: false,
   };
 
   jest.spyOn(Storage.prototype, "setItem");
@@ -28,25 +27,23 @@ describe("ListItem", () => {
   it("Render ListItem", () => {
     render(<ListItem pos={0} item={task} />);
 
-    expect(screen.getByText(task.text)).toBeDefined();
+    expect(screen.getByText(task.task)).toBeDefined();
   });
 
   it("Toggle item status", async () => {
     const { rerender } = render(<ListItem pos={0} item={task} />);
     expect(screen.getByText("Complete")).toBeDefined();
 
-    // Complete task
     const completeButton = screen.getByRole("button");
     fireEvent.click(completeButton);
 
-    rerender(<ListItem pos={0} item={{ ...task, status: Status.Completed }} />);
+    rerender(<ListItem pos={0} item={{ ...task, status: true }} />);
     expect(screen.getByText("Delete")).toBeDefined();
     expect(screen.getByText("Recover")).toBeDefined();
 
     const otherButtons = screen.getAllByRole("button");
     expect(otherButtons.length).toBe(2);
 
-    // Restore task
     const restoreButton = screen.getAllByRole("button")[1];
     fireEvent.click(restoreButton);
 
@@ -58,15 +55,13 @@ describe("ListItem", () => {
     const { rerender } = render(<ListItem pos={0} item={task} />);
     expect(screen.getByText("Complete")).toBeDefined();
 
-    // Complete task
     const completeButton = screen.getByRole("button");
     fireEvent.click(completeButton);
 
-    rerender(<ListItem pos={0} item={{ ...task, status: Status.Completed }} />);
+    rerender(<ListItem pos={0} item={{ ...task, status: true }} />);
     expect(screen.getByText("Delete")).toBeDefined();
 
-    // Delete task
-    const restoreButton = screen.getAllByRole("button")[0];
-    fireEvent.click(restoreButton);
+    const deleteButton = screen.getAllByRole("button")[0];
+    fireEvent.click(deleteButton);
   });
 });

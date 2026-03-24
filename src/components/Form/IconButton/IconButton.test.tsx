@@ -1,18 +1,20 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import { IconButton } from "./IconButton";
 import { BsTrash } from "react-icons/bs";
+
+import { fireEvent, render, screen } from "@testing-library/react";
+
+import { IconButton } from "./IconButton";
 
 describe("IconButton", () => {
   const handleClick = jest.fn();
 
   it("Render button", () => {
-    render(<IconButton icon={<BsTrash />} onClick={handleClick} />);
+    render(<IconButton icon={BsTrash} onClick={handleClick} />);
 
     expect(screen.getByRole("button")).toBeDefined();
   });
 
   it("IconButton click", () => {
-    render(<IconButton icon={<BsTrash />} onClick={handleClick} />);
+    render(<IconButton icon={BsTrash} onClick={handleClick} />);
     const button = screen.getByRole("button");
 
     fireEvent.click(button);

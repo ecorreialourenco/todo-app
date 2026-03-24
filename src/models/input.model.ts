@@ -3,6 +3,7 @@ export interface InputProps {
   name: string;
   value: string;
   onChange: (value: InputOnChangeProps) => void;
+  type?: string;
 }
 
 export interface InputOnChangeProps {

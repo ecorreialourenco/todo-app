@@ -4,9 +4,9 @@ import { Task } from "../../models/task.model";
 
 describe("List", () => {
   const list: Task[] = [
-    { date: "10/04/2023", status: 0, text: "task 1" },
-    { date: "11/04/2023", status: 0, text: "task 2" },
-    { date: "12/04/2023", status: 0, text: "task 3" },
+    { date: "10/04/2023", status: false, task: "task 1" },
+    { date: "11/04/2023", status: false, task: "task 2" },
+    { date: "12/04/2023", status: false, task: "task 3" },
   ];
 
   it("Render empty list", async () => {

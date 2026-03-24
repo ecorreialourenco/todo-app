@@ -1,9 +1,9 @@
-import { Dispatch, SetStateAction, createContext } from "react";
+import { createContext } from "react";
 import { Task } from "../models/task.model";
 
 export type StoreContextModel = {
   list: Task[];
-  setList: Dispatch<SetStateAction<Task[]>>;
+  setList: (task: Task) => void;
 };
 
 export const StoreContext = createContext<StoreContextModel>({

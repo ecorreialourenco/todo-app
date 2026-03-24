@@ -1,5 +1,6 @@
 import { FC } from "react";
-import { Input, Modal } from "../../../components";
+import { Input } from "../../../components/Form/Input";
+import { Modal } from "../../../components/Modal";
 import { InputOnChangeProps } from "../../../models/input.model";
 
 interface AddTaskModalProps {

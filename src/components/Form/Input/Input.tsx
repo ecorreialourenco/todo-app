@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { InputProps } from "../../../models/input.model";
 
-export const Input: FC<InputProps> = ({ label, name, value, onChange }) => {
+export const Input: FC<InputProps> = ({ label, name, value, onChange, type = "text" }) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, name } = e.target;
     onChange({ name, value });
@@ -15,7 +15,7 @@ export const Input: FC<InputProps> = ({ label, name, value, onChange }) => {
         </label>
       )}
       <input
-        type="text"
+        type={type}
         id={name}
         data-testid="input"
         name={name}
